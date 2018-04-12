@@ -1,0 +1,105 @@
+
+ <div  class="container m-t-50">
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Search By</label>
+                            <div class="col-md-8">
+                                <select class="form-control" ng-model="SelectedCriteria" ng-options="S for S in Selectors">
+                                    <option value="">please select value</option>
+                                </select> 
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Search value:</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" ng-model="filterValue" class="form-control" 
+                                ng-change="getresourcelistFilter();"/> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="container m-t-20" >
+                	<div class="row" ng-repeat="resource in resourcelist">
+         <div class="col-sm-2"></div>
+         <div class="col-sm-8">
+         <div class="panel panel-primary">
+         <div class="panel-heading" style="background-color:#30426a"><h3 class="text-center" style="color:#fff">{{resource.companyName}}</h3></div>
+          <div class="panel-body">
+          <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+          <div class="row">
+              <div class="col-sm-4"><label> Resource Name</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{ resource.firstName}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Email</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{resource.emailId}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Skills</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{ resource.skills}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Total Experience</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{resource.totalExperience}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Avaliability</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{resource.availability}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Preferred Location</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{resource.preferredLocation}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>City</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{resource.city}}</div>
+          </div>
+      
+          </div>
+          <div class="col-sm-2"></div>
+          </div>
+          
+          </div>
+          
+        </div>
+        </div>
+        </div> 
+						   				
+						
+                </div> 
+
+
+
+                 
+
+
+                 <div class="row">
+                   <div class="col-md-6">
+                     <pagination total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected" direction-links="true" ng-model="pageIndex" max-size="maxSize" class="pagination" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+                    </div>
+                    
+                     
+                     
+
+                 </div>
+      
+      
+      
+      
+      
+</div>

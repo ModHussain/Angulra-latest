@@ -1,0 +1,97 @@
+ <div  class="container m-t-50">
+             <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Search By</label>
+                            <div class="col-md-8">
+                                <select class="form-control" ng-model="SelectedCriteria" ng-options="S for S in Selectors">
+                                    <option value="">please select value</option>
+                                </select> 
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Search value:</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" ng-model="filterValue" class="form-control" 
+                                ng-change="postFilter();"/> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <div class="container m-t-20">
+           
+                       
+      <div class="row" ng-repeat="x in list">
+         <div class="col-sm-2"></div>
+         <div class="col-sm-8">
+         <div class="panel panel-primary">
+         <div class="panel-heading" style="background-color:#30426a"><h3 class="text-center" style="color:#fff">{{x.companyName}}</h3></div>
+          <div class="panel-body">
+          <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+          <div class="row">
+              <div class="col-sm-4"><label>Job Category</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{ x.jobCategory}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Job Type</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.jobTitle}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Job Description</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{ x.description}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Job Location</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.jobLocation}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Experience</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.experience}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>Primary Skills</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.primarySkills}}</div>
+          </div>
+           <div class="row">
+              <div class="col-sm-4"><label>No of Resources</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.resources}}</div>
+          </div>
+          <div class="row">
+              <div class="col-sm-4"><label>Join Within</label></div>
+              <div class="col-sm-2">:</div>
+              <div class="col-sm-6">{{x.joinWithin}}</div>
+          </div>
+      
+          </div>
+          <div class="col-sm-2"></div>
+          </div>
+          
+          </div>
+          
+        </div>
+        </div>
+        </div> 
+
+
+                                  </div>
+                                  <div class="row">
+                                  <div class="col-md-6">
+                                      <pagination total-items="totalCount" ng-change="pageChanged()" items-per-page="pageSizeSelected" direction-links="true" ng-model="pageIndex" max-size="maxSize" class="pagination" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+                                  </div>
+                                  
+                                  </div>
+                              </div>
