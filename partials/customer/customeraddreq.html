@@ -71,12 +71,20 @@
                     </select>
                          <span class="help-block" ng-show="frm.joblocation.$dirty && frm.joblocation.$invalid">Please Select Job Location..!!</span> 
                 </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label">Rate Type</label>:<span class="red">*</span>
                         <input type="text" class="form-control" name="ratetype" ng-model="postrequirement.rateType" placeholder="Enter Your Rate Type" required>
                         <span class="help-block" ng-show="frm.ratetype.$dirty && frm.ratetype.$error.required">Required.!</span>
                         <span class="help-block" ng-show="frm.ratetype.$error.pattern && frm.ratetype.$invalid ">please enter rate type..!!</span> 
-                    </div> 
+                    </div> -->
+                     <div class="form-group">
+                    <label class="control-label">Rate Type</label>:<span class="red">*</span>
+                    <select class="form-control" ng-options="r for r in Rate" ng-model="postrequirement.rateType" name="ratetype" required>
+                           <option value="">Select Your Rate Type</option>
+                    </select>
+                        <span class="help-block" ng-show="frm.ratetype.$dirty && frm.ratetype.$error.required">Required.!</span>
+                        <span class="help-block" ng-show="frm.ratetype.$error.pattern && frm.ratetype.$invalid ">please enter rate type..!!</span> 
+                </div>
                     <div class="form-group">
                         <label class="control-label">Experience</label>:<span class="red">*</span>
                         <select class="form-control" ng-options="exp for exp in experience" ng-model="postrequirement.experience" name="experience" required> 

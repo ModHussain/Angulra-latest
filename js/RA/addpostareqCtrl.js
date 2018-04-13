@@ -55,8 +55,10 @@ resourceApp.controller('addpostreqCtrl',["$scope","$rootScope","$state","RAServi
        
 	$scope.jobcategory = ["Java Developer","UI Developer","IDM Consultant","xgfhdfgh"];
 	$scope.jobtype = ["contract","full-time","part-time"];
-    $scope.joblocation= ["Bangalore","Chennai","Hyderabad","Pune"];
+    $scope.joblocation= ["Bangalore","Chennai","Hyderabad","Pune","Itanagar","Dispur","Patna","Raipur","Panaji","Gandhinagar","Punjab","Shimla","Srinagar","Ranchi",
+    	"Thiruvananthapuram","Bhopal","Mumbai","Imphal","Shillong","Aizawl","Kohima","Bhubaneswar","Jaipur","Gangtok","Noida","Amaravathi","Agartala","Lucknow","Dehradun","Kolkata"];
     $scope.experience = ["1-2 years","2-3 years","3-5 years","5-7 years","7-10 years"]; 
+    $scope.Rate=["Hourly","Per-Day","Per-Week","Per-Month"];
 	$scope.primaryskills = ["Java","JDBC","HTML5","CSS3","Javascript","AngularJS"];
 	$scope.secondaryskills = ["Oracle","MYSQL","SQL Server","MongoDB","WebRTC","Web Socket"];
 	$scope.joining = ["Immediate","10-15 days","15-30 days","30-45 days"];

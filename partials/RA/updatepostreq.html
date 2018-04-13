@@ -5,7 +5,7 @@
           <form name="frm" class="frmbgclr" ng-submit="saveDetails()">
                 <div class="form-group">
                   <label class="control-label">Company Name</label>:<span class="red">*</span>
-                      <select class="form-control" ng-options="x for x in companyNameList" ng-change="companyid()" ng-model="companyName1" name="companyName" required>
+                      <select class="form-control" ng-options="x for x in companyNameList" ng-change="companyid()" ng-model="postrequirement.companyName" name="companyName" required>
                         <option value="">Select CompanyName</option>
                       </select>
                   <span class="help-block" ng-show="frm.companyName.$dirty && frm.companyName.$invalid">Please select company Name..!!</span>
@@ -45,12 +45,20 @@
                     </select>
                          <span class="help-block" ng-show="frm.joblocation.$dirty && frm.joblocation.$invalid">Please Select Job Location..!!</span> 
                 </div>
-                    <div class="form-group">
+                    <!--  <div class="form-group">
                         <label class="control-label">Rate Type</label>:<span class="red">*</span>
                         <input type="text" class="form-control" name="ratetype" ng-model="postrequirement.rateType" placeholder="Enter Your Rate Type" required>
                         <span class="help-block" ng-show="frm.ratetype.$dirty && frm.ratetype.$error.required">Required.!</span>
                         <span class="help-block" ng-show="frm.ratetype.$error.pattern && frm.ratetype.$invalid ">please enter rate type..!!</span> 
-                    </div> 
+                    </div>--> 
+                    <div class="form-group">
+                        <label class="control-label">Rate Type</label>:<span class="red">*</span>
+                        <select class="form-control" ng-options="r for r in Rate" ng-model="postrequirement.rateType" name="ratetype" required> 
+                            <option value="">Select Experience</option>
+                        </select>
+                        <span class="help-block" ng-show="frm.ratetype.$dirty && frm.ratetype.$error.required">Required.!</span>
+                        <span class="help-block" ng-show="frm.ratetype.$error.pattern && frm.ratetype.$invalid ">please enter rate type..!!</span> 
+                        </div>
                     <div class="form-group">
                         <label class="control-label">Experience</label>:<span class="red">*</span>
                         <select class="form-control" ng-options="exp for exp in experience" ng-model="postrequirement.experience" name="experience" required> 
