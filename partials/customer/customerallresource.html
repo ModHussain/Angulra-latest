@@ -1,5 +1,15 @@
-
+       
  <div  class="container m-t-50">
+ <br>
+                  <form class="form-inline text-center">
+                    <div class="input-group">
+                    <input type="text" ng-model="search" class="form-control" size="50" placeholder="Search Here...." required>
+                    <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary">Search</button>
+                    </div>
+                    </div>
+                </form>
+              <br>
               <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-6">
@@ -25,47 +35,47 @@
                 </div>
             </div>
                 <div class="container m-t-20" >
-                	<div class="row" ng-repeat="resource in resourcelist">
+                	<div class="row" ng-repeat="resource in resourcelist | filter:search">
          <div class="col-sm-2"></div>
          <div class="col-sm-8">
-         <div class="panel panel-primary">
-         <div class="panel-heading" style="background-color:#30426a"><h3 class="text-center" style="color:#fff">{{resource.companyName}}</h3></div>
-          <div class="panel-body">
+         <div class="panel panel-default">
+         <div><h3 class="text-center" style="color:#000"><span class="	fa fa-building"></span>&nbsp;&nbsp;{{resource.companyName}}</h3></div>
+          <div class="panel-body" style="background-color:#eee">
           <div class="row">
           <div class="col-sm-2"></div>
           <div class="col-sm-10">
           <div class="row">
-              <div class="col-sm-4"><label> Resource Name</label></div>
+              <div class="col-sm-4"><span class="	fa fa-user-circle-o"></span>&nbsp;&nbsp;<label> Resource Name</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{ resource.firstName}}</div>
           </div>
            <div class="row">
-              <div class="col-sm-4"><label>Email</label></div>
+              <div class="col-sm-4"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<label>Email</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{resource.emailId}}</div>
           </div>
            <div class="row">
-              <div class="col-sm-4"><label>Skills</label></div>
+              <div class="col-sm-4"><span class="glyphicon glyphicon-tag"></span>&nbsp;&nbsp;<label>Skills</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{ resource.skills}}</div>
           </div>
            <div class="row">
-              <div class="col-sm-4"><label>Total Experience</label></div>
+              <div class="col-sm-4"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;<label>Total Experience</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{resource.totalExperience}}</div>
           </div>
            <div class="row">
-              <div class="col-sm-4"><label>Avaliability</label></div>
+              <div class="col-sm-4"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;<label>Avaliability</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{resource.availability}}</div>
           </div>
            <div class="row">
-              <div class="col-sm-4"><label>Preferred Location</label></div>
+              <div class="col-sm-4"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;<label>Preferred Location</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{resource.preferredLocation}}</div>
           </div>
            <div class="row">
-              <div class="col-sm-4"><label>City</label></div>
+              <div class="col-sm-4"><span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;<label>City</label></div>
               <div class="col-sm-2">:</div>
               <div class="col-sm-6">{{resource.city}}</div>
           </div>

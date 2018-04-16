@@ -11,7 +11,7 @@ resourceApp.controller('vendorCtrl',['$scope','$state','RAService',function($sco
 		console.log($scope.user1);
 		console.log($scope.register);
 		
-		
+		$scope.model = "Vendor";
 		
 		$scope.dataregister = function(){
 			

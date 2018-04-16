@@ -8,7 +8,7 @@ resourceApp.controller('updatepostareqCtrl',["$scope","$rootScope","$state","$st
 		 $scope.edit();
         })
 		
-		$scope.companyid = function(){
+	$scope.companyid = function(){
 				RAService.getCompanyList().then(function(data) {
             debugger;
              $scope.list=data;
@@ -17,7 +17,7 @@ resourceApp.controller('updatepostareqCtrl',["$scope","$rootScope","$state","$st
 				$scope.companyNameList.push($scope.list[i].companyName);
 				$scope.companyId.push($scope.list[i]._id);
 			 }
-      $scope.companyid = function(){
+    /*  $scope.companyid = function(){
 		  debugger;
 		 for(var j=0;j<$scope.companyNameList.length;j++){
 
@@ -28,7 +28,7 @@ resourceApp.controller('updatepostareqCtrl',["$scope","$rootScope","$state","$st
 
             }
 }
-	  }
+	  }*/
 });
 			}
 		
@@ -63,7 +63,7 @@ resourceApp.controller('updatepostareqCtrl',["$scope","$rootScope","$state","$st
 
 $scope.saveDetails = function () {
 	debugger;
-	$scope.postrequirement.registrationId = $scope.comId;
+//	$scope.postrequirement.registrationId = $scope.comId;
 	$scope.postrequirement.primarySkills = $scope.postrequirement.primarySkills.toString();
 	$scope.postrequirement.secondarySkills = $scope.postrequirement.secondarySkills.toString();
     RAService.updatepostareq($scope.postrequirement).then(function(data){

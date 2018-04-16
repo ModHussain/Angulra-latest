@@ -9,14 +9,15 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a ui-sref=".dashboard">Dashboard</a></li>
-        <li><a ui-sref="customer.customerlist({userId:id})">Profile</a></li>
-		<li ng-show="{{all_users_type}}"><a ui-sref=".alluserlist">All User</a></li>
-		<li><a ui-sref=".postrequirement" >Post Requirement</a></li>
-		<li><a ui-sref=".resourceMap">Resource Map</a></li>
-		<li><a ui-sref="customer.resourcelist">All Resource</a></li>
+        <li ui-sref-active="active"><a ui-sref=".dashboard">Dashboard</a></li>
+        <li ui-sref-active="active"><a ui-sref="customer.customerlist({userId:id})">Profile</a></li>
+		<li ng-show="{{all_users_type}}" ui-sref-active="active"><a ui-sref=".alluserlist">All User</a></li>
+		<li ui-sref-active="active"><a ui-sref=".postrequirement" >Post Requirement</a></li>
+		<li ui-sref-active="active"> <a ui-sref=".resourceMap">Resource Map</a></li>
+		<li ui-sref-active="active"><a ui-sref="customer.resourcelist">All Resource</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+      <li><a><span class="	fa fa-user-circle-o"></span>&nbsp;{{model}}</a></li>
       <li class="m-t-20"> 
       <select class="form-control" ng-options="reg for reg in register" ng-model="registerData" ng-change="dataregister()">
 		<option value="" disabled="">Switch To</option>

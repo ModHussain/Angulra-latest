@@ -7,6 +7,7 @@ resourceApp.controller('customerCtrl',['$scope','$state','RAService',function($s
 		$scope.user1 = localStorage.getItem('user')
 		console.log($scope.user1)
 		console.log($scope.register);
+		$scope.model = "Customer";
 		$scope.dataregister = function(){
 			
 			if($scope.registerData == "RA"){
